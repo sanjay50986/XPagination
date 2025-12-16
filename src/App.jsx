@@ -31,12 +31,15 @@ const App = () => {
     <main>
       <h1>Employee Data table</h1>
       <table>
+        <thead>
         <tr className='table-head' >
           <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Role</th>
         </tr>
+        </thead>
+        <tbody>
         {currentEmployees.map((employee, index) => (
           <tr className='table-data' key={index}>
             <td>{employee.id}</td>
@@ -45,6 +48,7 @@ const App = () => {
             <td>{employee.role}</td>
         </tr>
         ))}
+        </tbody>
       </table>
 
       <div className='Paginatin'>
